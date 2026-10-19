@@ -2,7 +2,7 @@ from fastapi import APIRouter
 router = APIRouter()
 
 students = [
- {"id": 1, "name": "A", "course": "Python"},
+ {"id": 1, "name": "A", "course": "Python "},
  {"id": 2, "name": "B", "course": "Data Analysis"},
  {"id": 3, "name": "C", "course": "FastAPI"}
 ]
