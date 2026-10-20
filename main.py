@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from routers.students  import router as student_router 
-from routers.courses import router as course_router
+from routers.studentsRouter  import router as student_router 
+from routers.coursesRouter import router as course_router
 app = FastAPI()
 @app.get("/")
 def home():
