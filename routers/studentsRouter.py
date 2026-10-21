@@ -3,7 +3,11 @@ from models.studentModel import Student
 router = APIRouter()
 # s1 =Student(id="101",name="a",)
 students = [Student(id="101",name="a",course="IT"),
-            Student(id="102",name="b",course="SW dev")
+            Student(id="102",name="b",course="SW dev"),
+            Student(id="103",name="c",course="SW dev"),
+                        
+            Student(id="104",name="d",course="webd"),
+            Student(id="105",name="e",course="webd")                                                
             ]
 @router.post("/students")
 def create_student(student:Student):
@@ -12,9 +16,15 @@ def create_student(student:Student):
         "message":"Student added successfully",
         "students":students
     }
+
 @router.get("/students")
-def getstudents():
-    return students
+def getstudents(course:str ="none"):
+    if(course =="none"):
+        return students
+    else:
+        sts= [s for  s in students if s.course == course ]
+        return sts
+        # return "we will return student  of course ",course
 
 @router.put("/student/{student_id}")
 def update_student(student_id:str,student:Student):
