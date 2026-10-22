@@ -1,0 +1,44 @@
+http://127.0.0.1:8000/items            Get method    ---> give all the items
+http://127.0.0.1:8000/item/2           Get method    ---> give item whose id is 2
+
+http://127.0.0.1:8000/item         post method  with data in json body like {"name":"TV","price":2000,"in_stock":true}
+this will add new data to database
+
+http://127.0.0.1:8000/item/2           delete method    ---> delete item whose id is 2
+
+http://127.0.0.1:8000/item/2           put method  with data in json body like
+ {"name":"new values","price":1111,"in_stock":true}    ---> update  item whose id is 2
+
+
+
+
+·       Read the supplied ticket specification and identify the required fields, such as title, description and status, without adding unrequested personal data.
+    title : str, description :str, status str(pending, completed)
+·       Write the required endpoint list before implementation.
+
+http://127.0.0.1:8000/tickets            Get method    ---> give all the tickets
+http://127.0.0.1:8000/ticket/status pending/complete           Get method    ---> give item whose status matched with the given one
+
+http://127.0.0.1:8000/ticket         post method  with data in json body like {"title":"tck1","description":"dsfjldsjf,
+"status":"active"}
+this will add new data to database
+
+http://127.0.0.1:8000/ticket/2           delete method    ---> delete ticket whose id is 2
+
+http://127.0.0.1:8000/ticket/2           put method  with data in json body like
+{"title":"tck1updated","description":"dsfjldsjfupdated",
+"status":"active"}   ---> update  ticket whose id is 2
+
+
+
+·       Create the project files using the structure supplied by the tutor.
+
+models/
+    ticketmodel.py   
+    ticketschema.py
+routers/
+    ticketRouter.py
+
+update your main.py
+·       Create the required Pydantic request and response models.
+
