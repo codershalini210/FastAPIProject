@@ -1,0 +1,5 @@
+TC01: create item
+Requirment : create an item with valid data
+Scenario : POST /item
+EXpected result : 201 , items details retunmed
+Evidence : pyteset output and assertions
