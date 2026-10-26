@@ -1,0 +1,5 @@
+first install 
+pip install python-dotenv
+
+
+then create .env file 
